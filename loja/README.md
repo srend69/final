@@ -1,19 +1,18 @@
-# Mercado Aurora – front-end
+# Aurora – front-end de e-commerce
 
-Abra a pasta no VS Code e rode `index.html` (extensão **Live Server**) ou dê duplo clique no arquivo.
+Abra a pasta no VS Code e rode `index.html` (extensão **Live Server**) ou dê duplo clique.
 
 ## Estrutura
 - `index.html` – estrutura da página
-- `css/style.css` – estilos (tema claro/escuro)
+- `css/style.css` – estilos (tema claro/escuro, responsivo)
 - `js/config.js` – `API_BASE`: URL do seu servidor (vazio = modo demonstração)
-- `js/utils.js` – funções auxiliares e acesso ao localStorage
+- `js/utils.js` – utilitários e localStorage
 - `js/api.js` – chamadas ao servidor (e servidor simulado)
-- `js/state.js` – carrinho (localStorage), sessão, menu e avisos
-- `js/views.js` – telas: produtos, login, cadastro, carrinho, checkout
+- `js/state.js` – carrinho, cupons, favoritos, tema e menu
+- `js/views.js` – telas
 - `js/app.js` – rotas e eventos
 
-## Integrar com o back-end
-Defina `API_BASE` em `js/config.js`. Endpoints esperados:
-`GET /products` · `POST /auth/register` · `POST /auth/login` · `POST /orders`
-
-Produto esperado: `{ id, name, category, price, image }` (`image` = URL da imagem).
+## Back-end
+Endpoints: `GET /products` · `POST /auth/register` · `POST /auth/login` · `GET/POST /orders`
+Produto: `{ id, name, category, price, old, rating, reviews, desc, image }` (`image` = URL).
+Cupons de teste: `AURORA10` (10%) e `BEMVINDO` (15%).
